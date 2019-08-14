@@ -139,7 +139,7 @@ if ( !class_exists( 'toc' ) ) :
 			add_action( 'widgets_init', array(&$this, 'widgets_init') );
 			add_action( 'sidebar_admin_setup', array(&$this, 'sidebar_admin_setup') );
 			
-			add_filter( 'the_content', array(&$this, 'the_content'), 100 );	// run after shortcodes are interpretted (level 10)
+			add_filter( 'the_content', array(&$this, 'the_content'), 9 );	// run after shortcodes are interpretted (level 10)
 			add_filter( 'plugin_action_links', array(&$this, 'plugin_action_links'), 10, 2 );
 			add_filter( 'widget_text', 'do_shortcode' );
 			
